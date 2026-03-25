@@ -1,26 +1,180 @@
+/* Box model fix
+------------------------------------*/
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
 /* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
+# - #111827 (Dark Navy)
+# - #374151 (Slate Gray)
+# - #E5E7EB (Light Gray)
+# - #2563EB (Accent Blue)
+# - #F3F4F6 (Very Light Gray)
 */
+
 
 /* Global styles 
 ------------------------------------*/
 body {
-    /*background: lightblue;*/
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #FFFFFF;
+    color: #111827;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+
+/* Navigation
+------------------------------------*/
+nav {
+    background: #111827;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #2563EB;
+}
+
+
+/* Reusable columns
+------------------------------------*/
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
 }
 
 
 /* Header & Footer 
 ------------------------------------*/
+header {
+    background: #111827;
+    color: #FFFFFF;
+}
 
+header h1,
+header h2 {
+    margin: 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+}
+
+footer {
+    background: #111827;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
 
 
 /* Work Experience
 ------------------------------------*/
+main section:first-of-type {
+    background: #E5E7EB;
+}
+
+.job-item {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
 
 
-
-/* Education
+/* Education with background image + gradient
 ------------------------------------*/
+main section:last-of-type {
+    background:
+        linear-gradient(rgba(17, 24, 39, 0.75), rgba(37, 99, 235, 0.55)),
+        url("../images/background.jpg") center/cover no-repeat;
+    color: #FFFFFF;
+}
+
+main section:last-of-type h3,
+main section:last-of-type p,
+main section:last-of-type h2 {
+    color: #FFFFFF;
+}
