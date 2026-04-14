@@ -1,5 +1,3 @@
-/* Box model fix
-------------------------------------*/
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -9,13 +7,11 @@ html {
     box-sizing: inherit;
 }
 
-
 /* Color Palette
 # - #111827 (Dark Navy)
 # - #374151 (Slate Gray)
 # - #E5E7EB (Light Gray)
 # - #2563EB (Accent Blue)
-# - #F3F4F6 (Very Light Gray)
 */
 
 
@@ -24,10 +20,16 @@ html {
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #FFFFFF;
+    background: #E5E7EB;
     color: #111827;
     line-height: 1.6;
-    padding-top: 70px;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -58,13 +60,6 @@ ul {
     margin-left: 20px;
 }
 
-.content-wrap {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 50px;
-    overflow: hidden;
-}
-
 
 /* Navigation
 ------------------------------------*/
@@ -79,11 +74,10 @@ nav {
 }
 
 nav a {
-    color: #FFFFFF;
+    color: #E5E7EB;
     text-decoration: none;
     font-weight: 600;
     margin: 0 15px;
-    display: inline-block;
 }
 
 nav a:hover {
@@ -107,11 +101,21 @@ nav a:hover {
 }
 
 
-/* Header & Footer 
+/* Header
 ------------------------------------*/
 header {
-    background: #111827;
-    color: #FFFFFF;
+    background:
+        linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)),
+        url("../images/background.jpg") no-repeat center center/cover;
+    color: #E5E7EB;
+    padding-top: 100px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 250px;
+    display: block;
 }
 
 header h1,
@@ -119,16 +123,12 @@ header h2 {
     margin: 0;
 }
 
-.profile-img {
-    border-radius: 50%;
-    width: 100%;
-    max-width: 300px;
-    display: block;
-}
 
+/* Footer
+------------------------------------*/
 footer {
     background: #111827;
-    color: #FFFFFF;
+    color: #E5E7EB;
     text-align: center;
 }
 
@@ -158,23 +158,10 @@ main section:first-of-type {
     background: #E5E7EB;
 }
 
-.job-item {
-    overflow: hidden;
-    margin-bottom: 30px;
-}
 
-
-/* Education with background image + gradient
+/* Education
 ------------------------------------*/
 main section:last-of-type {
-    background:
-        linear-gradient(rgba(17, 24, 39, 0.75), rgba(37, 99, 235, 0.55)),
-        url("../images/background.jpg") center/cover no-repeat;
-    color: #FFFFFF;
-}
-
-main section:last-of-type h3,
-main section:last-of-type p,
-main section:last-of-type h2 {
-    color: #FFFFFF;
+    background: #374151;
+    color: #E5E7EB;
 }
